@@ -10,5 +10,18 @@
 }
 
 body {
-  @apply m-auto md:w-[90%] bg-slate-200 max-w-[111];
+  @apply m-auto md:w-[90%] bg-gray-50 max-w-[111];
+}
+
+.layout {
+  max-width: 75rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  :where(input) {
+    font-size: 1.6rem;
+  }
 }

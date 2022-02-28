@@ -1,22 +1,23 @@
-import Layout from "@/components/organisms/layout";
-import type { NextPage } from "next";
-import Head from "next/head";
-import styles from "./index.module.css";
-import Hero from "@/components/organisms/hero";
-
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Hero from '@/components/organisms/hero';
+import CardCarousel from '@/components/molecules/card-carousel';
+import { RESTUARANTS } from 'src/util/constants';
 
 const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Nextal - Next Starter Template</title>
+        <title> Restaurants and Restaurant Reservations | OpenTable</title>
         <meta
-          name="description"
-          content="NextJs starter template using TypeScript and Tailwind"
+          name='description'
+          content='Restaurants and Restaurant Reservations | OpenTable'
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Hero/>
+      <Hero />
+      <CardCarousel data={RESTUARANTS} header='Take the restaurant home' />
+      <CardCarousel data={RESTUARANTS} header='Outdoor dining favorites' />
     </>
   );
 };
